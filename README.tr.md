@@ -81,10 +81,15 @@ Node, topic, durum makinesi ve mesaj sözleşmelerinin ayrıntıları
   hazırladım.
 - Altı kişilik ekibin yazılım çalışmalarını yönettim.
 
-`arayuz_pkg` içindeki yer kontrol arayüzü uygulaması ile `g_isleme_pkg`
-içindeki görüntü işleme uygulaması diğer Orion takım üyeleri tarafından
-geliştirildi. Bu bileşenler bütünleşik sistemi korumak için repoda yer alır;
-kişisel çalışmam gibi sunulmaz. Ayrıntı için
+## Diğer yazılım katkıları
+
+- **[Saadet Bayrakol](https://github.com/bayrakolsaadet) — Görüntü işleme:**
+  `g_isleme_pkg` içindeki görüntü işleme uygulamasını geliştirdi.
+- **[Eda Lazoğlu](https://github.com/EdanurLazoglu) — Yer kontrol arayüzü:**
+  `arayuz_pkg` içindeki kullanıcı arayüzü uygulamasını geliştirdi.
+
+Bu bileşenler bütünleşik sistemi korumak için repoda yer alır; kişisel
+çalışmam gibi sunulmaz. Ayrıntı için
 [Katkı Kapsamı](docs/contribution-scope.md) belgesine bakılabilir.
 
 ## Kullanılan ortam

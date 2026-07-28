@@ -82,10 +82,16 @@ available in [Architecture](docs/architecture.md).
 - Built the three-UAV PX4 SITL/Gazebo simulation setup and scenario workflow.
 - Coordinated the software work of the six-member team.
 
-The ground-control UI implementation in `arayuz_pkg` and the image-processing
-implementation in `g_isleme_pkg` were developed by other Orion team members.
-They are included to preserve the integrated system, not presented as my
-individual work. See [Contribution Scope](docs/contribution-scope.md).
+## Other software contributors
+
+- **[Saadet Bayrakol](https://github.com/bayrakolsaadet) — Image processing:**
+  developed the image-processing implementation in `g_isleme_pkg`.
+- **[Eda Lazoğlu](https://github.com/EdanurLazoglu) — Ground-control
+  interface:** developed the user-interface implementation in `arayuz_pkg`.
+
+These components are included to preserve the integrated system and are not
+presented as my individual work. See
+[Contribution Scope](docs/contribution-scope.md).
 
 ## Environment
 

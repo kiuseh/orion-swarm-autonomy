@@ -25,16 +25,31 @@ Verified contribution scope:
 - Built the PX4 SITL/Gazebo simulation setup and simulation scenarios.
 - Led and coordinated the software work of the six-person team.
 
-## Team-developed components
+## Saadet Bayrakol
 
-The following implementations were developed by other Orion team members:
+Role: Image processing.
 
-- The ground-control user-interface implementation in `arayuz_pkg`.
-- The image-processing implementation in `g_isleme_pkg`.
+Verified contribution scope:
+
+- Developed the image-processing implementation in `g_isleme_pkg`.
+
+GitHub: [bayrakolsaadet](https://github.com/bayrakolsaadet)
+
+## Eda Lazoğlu
+
+Role: Ground-control interface.
+
+Verified contribution scope:
+
+- Developed the user-interface implementation in `arayuz_pkg`.
+
+GitHub: [EdanurLazoglu](https://github.com/EdanurLazoglu)
+
+## Integration boundary
 
 Hüseyin Sefa Kiriş designed the system-level communication and integration in
-which these components operate, but does not present their implementation as
-his individual code.
+which these components operate, but does not present Saadet Bayrakol's or Eda
+Lazoğlu's implementation as his individual code.
 
 ## Why all packages are kept together
 
