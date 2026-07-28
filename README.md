@@ -6,7 +6,18 @@ ROS 2-based mission, coordination, and simulation workspace for a three-UAV
 swarm developed by the six-member Orion Team for the 2026 TEKNOFEST Swarm UAV
 project.
 
-![Three-UAV PX4 SITL and Gazebo simulation](docs/media/simulation-overview.png)
+## Synchronized system view
+
+The following screenshots capture the same moment of the three-UAV simulation
+on two separate displays.
+
+### Dynamic ground-control station
+
+[![Dynamic Swarm UAV Ground-Control Station showing live telemetry, vehicle roles, map tracks, system logs, and mission controls](docs/media/dynamic-ground-control-station.png)](docs/media/dynamic-ground-control-station.png)
+
+### Gazebo simulation and camera feeds
+
+[![Gazebo simulation showing three UAVs and simultaneous onboard camera feeds](docs/media/gazebo-simulation-and-cameras.png)](docs/media/gazebo-simulation-and-cameras.png)
 
 The system combines PX4 SITL, Gazebo, MAVSDK, ROS 2, a ground-control
 interface, and camera processing. Its core autonomy flow covers dynamic
