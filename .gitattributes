@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+*.caffemodel binary
+*.glb binary
+*.jpg binary
+*.jpeg binary
+*.png binary

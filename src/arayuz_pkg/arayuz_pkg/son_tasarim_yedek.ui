@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1456</width>
+    <height>709</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* TÜM PENCERE ARKA PLANI */
+QMainWindow { 
+    background-color: #0F1219; 
+}
+
+/* TEXT EDIT - LOG VE MESAJ EKRANI */
+QTextEdit {
+    background-color: #0D1117; 
+    color: #00FFC2;           
+    border: 1px solid #30363D;
+    border-left: 3px solid #00D1FF; 
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', 'Courier New'; 
+    font-size: 11px;
+    padding: 8px;
+}
+
+/* KAYDIRMA ÇUBUĞU TASARIMI (Scrollbar) */
+QScrollBar:vertical {
+    border: none;
+    background: #161B22;
+    width: 10px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical {
+    background: #30363D;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #00D1FF; 
+}
+
+/* GRUP KUTULARI (İHA Panelleri) */
+QGroupBox {
+    background-color: #161B22;
+    border: 1px solid #30363D;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #58A6FF;
+    font-weight: bold;
+}
+
+/* LCD GÖSTERGELER */
+QLCDNumber {
+    background-color: #000000;
+    color: #00FFC2;
+    border: 1px solid #30363D;
+}
+
+/* BUTONLAR */
+QPushButton {
+    background-color: #1F6FEB;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #388BFD;
+}
+
+QPushButton:hover {
+    background-color: #388BFD;
+}
+
+QPushButton:disabled {
+    background-color: #21262D;
+    color: #8B949E;
+}
+
+/* --- SADECE EKLENEN BATARYA KISMI --- */
+QProgressBar {
+    border: 1px solid #30363D;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #0D1117;
+    color: white;
+    font-weight: bold;
+}
+
+QProgressBar::chunk {
+    background-color: #00F2FF; 
+    width: 4px;                
+    margin: 1px;               
+}
+
+/* --- SADECE EKLEDİĞİMİZ ETİKETLER --- */
+QLabel {
+    color: #C9D1D9;
+    font-weight: bold;
+    background: transparent;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0">
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_17">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_19">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_36">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>İRTİFA</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_38">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>TLABEL2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QProgressBar" name="bar_batarya_14">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>mod durumu</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="isik_carpisma_7">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>35</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>41</width>
+               <height>41</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">/* Kapalı (Gri) Işık Görünümü */
+QLabel {
+    background-color: #555555;  /* Koyu gri renk */
+    border-radius: 10px;        /* Boyut 20 ise yarısı 10'dur. Bu kodu tam yuvarlak yapar */
+    border: 1px solid #000000;  /* İnce siyah çerçeve */
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_37">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>HIZ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_35">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>BATARYA</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2" rowspan="7">
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="DronluPusula" name="widget_8" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_63">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>91</width>
+                 <height>41</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>-1</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    /* Yazı Tipi ve Gümüş Rengi */
+    color: #E0E0E0; 
+    font-family: 'Consolas', 'Segoe UI', monospace;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+    /* Arka Plan: Koyu Füme Gradyan */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 rgba(30, 30, 30, 0.9), 
+                                      stop:1 rgba(15, 15, 15, 0.95));
+    
+    /* Çerçeve Tasarımı */
+    border: 1px solid #A0A0A0;
+    border-top: 2px solid #FFFFFF; /* Parlak üst çizgi */
+    border-radius: 4px;
+    
+    /* Hizalama ve Boşluk */
+    padding: 3px 8px;
+    qproperty-alignment: 'AlignCenter';
+}
+
+/* --- HOVER ETKİSİ --- */
+QLabel:hover {
+    /* Yazı saf beyaza dönerek parlar */
+    color: #FFFFFF; 
+    
+    /* Çerçeve gümüşten parlak beyaza geçer */
+    border-color: #FFFFFF;
+    
+    /* Arka plan hafifçe aydınlanır (metalik parlama hissi) */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 rgba(50, 50, 50, 0.95), 
+                                      stop:1 rgba(30, 30, 30, 0.98));
+    
+    /* Hafif bir gölge/ışıltı efekti (Opsiyonel) */
+    border-top: 3px solid #FFFFFF;
+}</string>
+               </property>
+               <property name="text">
+                <string>0°</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLCDNumber" name="lcd_irtifa_14">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="intValue" stdset="0">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLCDNumber" name="lcd_hiz_14">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_18">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="5" column="1">
+            <widget class="QLCDNumber" name="lcd_irtifa_13">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="intValue" stdset="0">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_32">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>BATARYA</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2" rowspan="7">
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="DronluPusula" name="widget_7" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_62">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>91</width>
+                 <height>41</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>-1</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    /* Yazı Tipi ve Gümüş Rengi */
+    color: #E0E0E0; 
+    font-family: 'Consolas', 'Segoe UI', monospace;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+    /* Arka Plan: Koyu Füme Gradyan */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 rgba(30, 30, 30, 0.9), 
+                                      stop:1 rgba(15, 15, 15, 0.95));
+    
+    /* Çerçeve Tasarımı */
+    border: 1px solid #A0A0A0;
+    border-top: 2px solid #FFFFFF; /* Parlak üst çizgi */
+    border-radius: 4px;
+    
+    /* Hizalama ve Boşluk */
+    padding: 3px 8px;
+    qproperty-alignment: 'AlignCenter';
+}
+
+/* --- HOVER ETKİSİ --- */
+QLabel:hover {
+    /* Yazı saf beyaza dönerek parlar */
+    color: #FFFFFF; 
+    
+    /* Çerçeve gümüşten parlak beyaza geçer */
+    border-color: #FFFFFF;
+    
+    /* Arka plan hafifçe aydınlanır (metalik parlama hissi) */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 rgba(50, 50, 50, 0.95), 
+                                      stop:1 rgba(30, 30, 30, 0.98));
+    
+    /* Hafif bir gölge/ışıltı efekti (Opsiyonel) */
+    border-top: 3px solid #FFFFFF;
+}</string>
+               </property>
+               <property name="text">
+                <string>0°</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLCDNumber" name="lcd_hiz_13">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="isik_carpisma_6">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>35</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>41</width>
+               <height>41</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">/* Kapalı (Gri) Işık Görünümü */
+QLabel {
+    background-color: #555555;  /* Koyu gri renk */
+    border-radius: 10px;        /* Boyut 20 ise yarısı 10'dur. Bu kodu tam yuvarlak yapar */
+    border: 1px solid #000000;  /* İnce siyah çerçeve */
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_33">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>İRTİFA</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QProgressBar" name="bar_batarya_13">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_34">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>HIZ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_15">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>TLABEL2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>mod durumu</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_20">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_15">
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_27">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>BATARYA</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLCDNumber" name="lcd_irtifa_11">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="intValue" stdset="0">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_28">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>İRTİFA</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLCDNumber" name="lcd_hiz_11">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="isik_carpisma_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>35</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>41</width>
+               <height>41</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">/* Kapalı (Gri) Işık Görünümü */
+QLabel {
+    background-color: #555555;  /* Koyu gri renk */
+    border-radius: 10px;        /* Boyut 20 ise yarısı 10'dur. Bu kodu tam yuvarlak yapar */
+    border: 1px solid #000000;  /* İnce siyah çerçeve */
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QProgressBar" name="bar_batarya_11">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>mod durumu</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_26">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>HIZ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_11">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>TLABEL2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2" rowspan="7">
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="DronluPusula" name="widget_5" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_60">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>91</width>
+                 <height>41</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>-1</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    /* Yazı Tipi ve Gümüş Rengi */
+    color: #E0E0E0; 
+    font-family: 'Consolas', 'Segoe UI', monospace;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+    /* Arka Plan: Koyu Füme Gradyan */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 rgba(30, 30, 30, 0.9), 
+                                      stop:1 rgba(15, 15, 15, 0.95));
+    
+    /* Çerçeve Tasarımı */
+    border: 1px solid #A0A0A0;
+    border-top: 2px solid #FFFFFF; /* Parlak üst çizgi */
+    border-radius: 4px;
+    
+    /* Hizalama ve Boşluk */
+    padding: 3px 8px;
+    qproperty-alignment: 'AlignCenter';
+}
+
+/* --- HOVER ETKİSİ --- */
+QLabel:hover {
+    /* Yazı saf beyaza dönerek parlar */
+    color: #FFFFFF; 
+    
+    /* Çerçeve gümüşten parlak beyaza geçer */
+    border-color: #FFFFFF;
+    
+    /* Arka plan hafifçe aydınlanır (metalik parlama hissi) */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 rgba(50, 50, 50, 0.95), 
+                                      stop:1 rgba(30, 30, 30, 0.98));
+    
+    /* Hafif bir gölge/ışıltı efekti (Opsiyonel) */
+    border-top: 3px solid #FFFFFF;
+}</string>
+               </property>
+               <property name="text">
+                <string>0°</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,0,1">
+      <item>
+       <widget class="QTextEdit" name="textEdit_2"/>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEdit_3"/>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="2">
+     <layout class="QGridLayout" name="gridLayout_5">
+      <property name="horizontalSpacing">
+       <number>7</number>
+      </property>
+      <item row="1" column="0">
+       <layout class="QGridLayout" name="gridLayout_10" columnstretch="0,0,0">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>48</width>
+            <height>48</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>KALKIŞ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>BEKLEME</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>ACİL İNİŞ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>639</width>
+          <height>326</height>
+         </size>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_7">
+             <item row="3" column="0">
+              <widget class="QPushButton" name="pushButton_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>GİRİŞ</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">/* Ana Kutu - Dış çerçeve burada tanımlanır */
+QDoubleSpinBox {
+    background-color: #000000;
+    color: #00FFC2;
+    border: 1.5px solid #00D1FF; /* Ana Turkuaz Çerçeve */
+    border-radius: 6px;
+    padding-left: 10px;
+    font-family: 'Consolas', monospace;
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* Yukarı Butonu */
+QDoubleSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 30px;
+    height: 20px;
+    background-color: #12161c;
+    /* ÖNEMLİ: Çerçevenin ana kutuyla çakışmaması için sağ ve üst kenarı şeffaf yapıyoruz */
+    border-left: 1.5px solid #00D1FF;
+    border-bottom: 0.75px solid #00D1FF;
+    border-top-right-radius: 5px;
+}
+
+/* Aşağı Butonu */
+QDoubleSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 30px;
+    height: 20px;
+    background-color: #12161c;
+    /* Sağ ve alt kenar ana kutunun çerçevesini kullansın diye boş bırakılır */
+    border-left: 1.5px solid #00D1FF;
+    border-top: 0.75px solid #00D1FF;
+    border-bottom-right-radius: 5px;
+}
+
+/* İşaretler (Genişlikleri ve konumları sabitlendi) */
+QDoubleSpinBox::up-arrow {
+    image: none;
+    background-color: #00FFC2;
+    width: 12px; height: 2px;
+    border-left: 5px solid #12161c; /* Dikey boşluk hilesi */
+    border-right: 5px solid #12161c;
+}
+
+QDoubleSpinBox::down-arrow {
+    image: none;
+    background-color: #FF3131;
+    width: 12px; height: 2px;
+}
+
+/* HOVER DURUMLARI - Çerçevenin bozulmaması için sadece iç rengi değiştirir */
+QDoubleSpinBox::up-button:hover { background-color: #00D1FF; }
+QDoubleSpinBox::down-button:hover { background-color: #FF3131; }</string>
+               </property>
+               <property name="wrapping">
+                <bool>false</bool>
+               </property>
+               <property name="readOnly">
+                <bool>false</bool>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::PlusMinus</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="1" rowspan="3">
+              <layout class="QGridLayout" name="gridLayout_8">
+               <item row="4" column="1">
+                <widget class="QLineEdit" name="lineEdit">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #000000;
+    color: white; /* Yazılar tamamen beyaz */
+    border: 1.5px solid #00D1FF; /* Senin ikonik turkuaz çerçeven */
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: 'Consolas', monospace; /* Teknik/Kod fontu */
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* Kutuya tıklandığında (Odaklandığında) */
+QLineEdit:focus {
+    border: 2px solid #00FFC2; /* Daha parlak bir turkuaz/yeşil vurgu */
+    background-color: #050505;
+}
+
+/* Mouse ile üzerine gelindiğinde hafif parlasın */
+QLineEdit:hover {
+    border: 1.5px solid #ffffff; /* Çerçeve beyaza yaklaşsın */
+}
+
+/* Yazı yazılamaz (Pasif) durumdayken */
+QLineEdit:disabled {
+    background-color: #12161c;
+    color: #555555;
+    border: 1.5px solid #333333;
+}</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLineEdit" name="lineEdit_2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #000000;
+    color: white; /* Yazılar tamamen beyaz */
+    border: 1.5px solid #00D1FF; /* Senin ikonik turkuaz çerçeven */
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: 'Consolas', monospace; /* Teknik/Kod fontu */
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* Kutuya tıklandığında (Odaklandığında) */
+QLineEdit:focus {
+    border: 2px solid #00FFC2; /* Daha parlak bir turkuaz/yeşil vurgu */
+    background-color: #050505;
+}
+
+/* Mouse ile üzerine gelindiğinde hafif parlasın */
+QLineEdit:hover {
+    border: 1.5px solid #ffffff; /* Çerçeve beyaza yaklaşsın */
+}
+
+/* Yazı yazılamaz (Pasif) durumdayken */
+QLineEdit:disabled {
+    background-color: #12161c;
+    color: #555555;
+    border: 1.5px solid #333333;
+}</string>
+                 </property>
+                 <property name="inputMask">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QPushButton" name="pushButton_5">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>GİRİŞ</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1" rowspan="2">
+                <layout class="QGridLayout" name="gridLayout_9">
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_4">
+                   <property name="text">
+                    <string>   BOYLAM</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="5" column="0">
+                <widget class="QPushButton" name="pushButton_6">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>GİRİŞ</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" rowspan="2">
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>   ENLEM</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>KALKIŞ YÜKSEKLİĞİ</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1456</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DronluPusula</class>
+   <extends>QWidget</extends>
+   <header>arayuz_pkg.pusula_kodu</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

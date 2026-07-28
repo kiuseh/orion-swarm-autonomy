@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1286</width>
+    <height>871</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="sag_frame">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>10</y>
+      <width>661</width>
+      <height>389</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayout_5">
+       <property name="horizontalSpacing">
+        <number>7</number>
+       </property>
+       <item row="1" column="0">
+        <layout class="QGridLayout" name="gridLayout_10" columnstretch="0,0,0">
+         <item row="1" column="1">
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>ACİL İNİŞ</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>BEKLEME</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>KALKIŞ</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QPushButton" name="btn_rol_atama">
+           <property name="text">
+            <string>ROL BELİRLE</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>639</width>
+           <height>326</height>
+          </size>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_7">
+              <item row="1" column="1" rowspan="3">
+               <layout class="QGridLayout" name="gridLayout_8">
+                <item row="4" column="1">
+                 <widget class="QLabel" name="label_4">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TAKİP &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;MESAFESİ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="boylam">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit {
+    background-color: #000000;
+    color: white; /* Yazılar tamamen beyaz */
+    border: 1.5px solid #00D1FF; /* Senin ikonik turkuaz çerçeven */
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: 'Consolas', monospace; /* Teknik/Kod fontu */
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* Kutuya tıklandığında (Odaklandığında) */
+QLineEdit:focus {
+    border: 2px solid #00FFC2; /* Daha parlak bir turkuaz/yeşil vurgu */
+    background-color: #050505;
+}
+
+/* Mouse ile üzerine gelindiğinde hafif parlasın */
+QLineEdit:hover {
+    border: 1.5px solid #ffffff; /* Çerçeve beyaza yaklaşsın */
+}
+
+/* Yazı yazılamaz (Pasif) durumdayken */
+QLineEdit:disabled {
+    background-color: #12161c;
+    color: #555555;
+    border: 1.5px solid #333333;
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;KALKIŞ&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;YÜKSEKLİĞİ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QLineEdit" name="takip_mesafesi">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit {
+    background-color: #000000;
+    color: white; /* Yazılar tamamen beyaz */
+    border: 1.5px solid #00D1FF; /* Senin ikonik turkuaz çerçeven */
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: 'Consolas', monospace; /* Teknik/Kod fontu */
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* Kutuya tıklandığında (Odaklandığında) */
+QLineEdit:focus {
+    border: 2px solid #00FFC2; /* Daha parlak bir turkuaz/yeşil vurgu */
+    background-color: #050505;
+}
+
+/* Mouse ile üzerine gelindiğinde hafif parlasın */
+QLineEdit:hover {
+    border: 1.5px solid #ffffff; /* Çerçeve beyaza yaklaşsın */
+}
+
+/* Yazı yazılamaz (Pasif) durumdayken */
+QLineEdit:disabled {
+    background-color: #12161c;
+    color: #555555;
+    border: 1.5px solid #333333;
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLineEdit" name="enlem">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit {
+    background-color: #000000;
+    color: white; /* Yazılar tamamen beyaz */
+    border: 1.5px solid #00D1FF; /* Senin ikonik turkuaz çerçeven */
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: 'Consolas', monospace; /* Teknik/Kod fontu */
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* Kutuya tıklandığında (Odaklandığında) */
+QLineEdit:focus {
+    border: 2px solid #00FFC2; /* Daha parlak bir turkuaz/yeşil vurgu */
+    background-color: #050505;
+}
+
+/* Mouse ile üzerine gelindiğinde hafif parlasın */
+QLineEdit:hover {
+    border: 1.5px solid #ffffff; /* Çerçeve beyaza yaklaşsın */
+}
+
+/* Yazı yazılamaz (Pasif) durumdayken */
+QLineEdit:disabled {
+    background-color: #12161c;
+    color: #555555;
+    border: 1.5px solid #333333;
+}</string>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;BOYLAM&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_3">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;ENLEM&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2" rowspan="2">
+                 <layout class="QGridLayout" name="gridLayout_9"/>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLineEdit" name="kalkis_yuksekligi">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit {
+    background-color: #000000;
+    color: white; /* Yazılar tamamen beyaz */
+    border: 1.5px solid #00D1FF; /* Senin ikonik turkuaz çerçeven */
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: 'Consolas', monospace; /* Teknik/Kod fontu */
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* Kutuya tıklandığında (Odaklandığında) */
+QLineEdit:focus {
+    border: 2px solid #00FFC2; /* Daha parlak bir turkuaz/yeşil vurgu */
+    background-color: #050505;
+}
+
+/* Mouse ile üzerine gelindiğinde hafif parlasın */
+QLineEdit:hover {
+    border: 1.5px solid #ffffff; /* Çerçeve beyaza yaklaşsın */
+}
+
+/* Yazı yazılamaz (Pasif) durumdayken */
+QLineEdit:disabled {
+    background-color: #12161c;
+    color: #555555;
+    border: 1.5px solid #333333;
+}</string>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="sol_frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>421</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_30">
+     <item row="1" column="0">
+      <widget class="QFrame" name="frame_sag">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QFrame" name="frame_lider">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QFrame" name="frame_sol">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1286</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

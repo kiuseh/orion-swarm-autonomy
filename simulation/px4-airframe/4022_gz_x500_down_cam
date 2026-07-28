@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# @name Gazebo x500 down camera
+#
+# @type Quadrotor
+#
+
+PX4_SIM_MODEL=${PX4_SIM_MODEL:=x500_down_cam}
+
+. ${R}etc/init.d-posix/airframes/4001_gz_x500
+
+# Use Gazebo odometry as an external yaw reference in SITL to suppress the
+# short post-takeoff heading convergence transient seen with mag-only startup.
+param set-default EKF2_EV_DELAY 0
+param set-default EKF2_EV_CTRL 8
+param set-default EKF2_MAG_TYPE 6
