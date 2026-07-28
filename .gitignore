@@ -1,0 +1,30 @@
+# ROS 2 / colcon outputs
+build/
+install/
+log/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Python environments
+.venv/
+venv/
+vros/
+
+# Local-only reports and agent context
+.agents/
+reports/
+tempCodeRunnerFile.python
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
