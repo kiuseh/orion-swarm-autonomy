@@ -11,13 +11,13 @@ geliştirilen, üç İHA'ya yönelik ROS 2 tabanlı görev, koordinasyon ve sim�
 Aşağıdaki ekran görüntüleri, üç İHA'lı simülasyonun aynı anını iki ayrı
 ekranda göstermektedir.
 
-### Dinamik yer kontrol istasyonu
-
-[![Canlı telemetriyi, araç rollerini, harita izlerini, sistem kayıtlarını ve görev kontrollerini gösteren Dinamik Sürü İHA Yer Kontrol İstasyonu](docs/media/dynamic-ground-control-station.png)](docs/media/dynamic-ground-control-station.png)
-
 ### Gazebo simülasyonu ve kamera görüntüleri
 
 [![Üç İHA'yı ve eşzamanlı araç kamera görüntülerini gösteren Gazebo simülasyonu](docs/media/gazebo-simulation-and-cameras.png)](docs/media/gazebo-simulation-and-cameras.png)
+
+### Dinamik yer kontrol istasyonu
+
+[![Canlı telemetriyi, araç rollerini, harita izlerini, sistem kayıtlarını ve görev kontrollerini gösteren Dinamik Sürü İHA Yer Kontrol İstasyonu](docs/media/dynamic-ground-control-station.png)](docs/media/dynamic-ground-control-station.png)
 
 Sistem; PX4 SITL, Gazebo, MAVSDK, ROS 2, yer kontrol istasyonu ve kamera
 işleme bileşenlerini bir araya getirir. Temel otonomi akışı dinamik
